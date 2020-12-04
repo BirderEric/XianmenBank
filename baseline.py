@@ -204,7 +204,7 @@ def model_train(df,trainlabel,cate_cols,test_,feature,num_class):
     return sub_preds,oof_lgb,clf,sub_preds1
 
 def main():
-    
+    gen_pesudo_data()
     df_aum = get_data(data_file='aum',param='load_aum_data')
     df_aum_test = get_quater_data(df_aum,data_type='aum',quater=5,colhead='X',num_col=8)
     df_aum_test_Q4 = get_quater_data(df_aum,data_type='aum',quater=4,colhead='X',num_col=8)
